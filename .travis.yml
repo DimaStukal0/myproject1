@@ -1,18 +1,11 @@
- Том в устройстве C не имеет метки.
- Серийный номер тома: B898-61A1
-
- Содержимое папки C:\Users\FDHG\WebstormProjects\myproject1
-
-26.12.2019  01:14    <DIR>          .
-26.12.2019  01:14    <DIR>          ..
-26.12.2019  00:56               587 .gitignore
-26.12.2019  01:00               633 .gitkeep
-25.12.2019  22:13    <DIR>          .idea
-26.12.2019  01:14                 0 .travis.yml
-26.12.2019  00:51               587 human.md
-25.12.2019  22:03               121 index
-26.12.2019  00:50               493 main.css
-26.12.2019  01:08    <DIR>          myproject1
-26.12.2019  00:50               541 readme.txt
-               7 файлов          2 962 байт
-               4 папок  24 050 892 800 байт свободно
+language: node_js
+node_js:
+  - node
+script:
+  - npm run test
+notifications:
+  email: false
+deploy:
+  provider: heroku
+  api_key: $api_key
+  app: nodejskpi
